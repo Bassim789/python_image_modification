@@ -164,3 +164,6 @@ while imageFile != '' and imageFile != ' ' and imageFile != 'q':
         print proccessImageModifyAll(path_image_original, path_image_modif)
     else:
         print 'a+'
+        
+        
+        
