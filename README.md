@@ -12,7 +12,7 @@ Les scripts disponibles sont les suivants:
 
 
 
-# mirror.py
+# mirror1.py
 
 ```
 
