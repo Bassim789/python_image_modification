@@ -12,7 +12,7 @@ Les scripts disponibles sont les suivants:
 
 
 
-# mirror1.py
+### mirror1.py
 
 ```
 
@@ -74,7 +74,7 @@ def modifyImage(img):
 
 
 
-# differences_recognition1.py
+### differences_recognition1.py
 
 ```
 def modifyImage(img):
