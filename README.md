@@ -14,7 +14,7 @@ Les scripts disponibles sont les suivants:
 
 ### mirror1.py
 
-```
+```python
 
 def modifyImage(img):
     
@@ -76,7 +76,8 @@ def modifyImage(img):
 
 ### differences_recognition1.py
 
-```
+```python
+
 def modifyImage(img):
 
     # get height and width
