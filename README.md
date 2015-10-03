@@ -141,5 +141,15 @@ def modifyImage(img):
     return newImg
 ````
 
+### differenceRecognition1 exemple
+
+#### before
+
+
+#### after
+![difference_01_modife](https://cloud.githubusercontent.com/assets/14947215/10262729/8306b118-69d4-11e5-970a-69dea7f6919f.png)
+
+#### differenceRecognition1 code
+
 
 
