@@ -6,17 +6,16 @@ You can modify type of modification files or create your own in the lib folder, 
 
 Modification type available:
 
-* differences_recognition1
 * mirror1
 * mirror2
 * mirror3
 * mirror4
+* differences_recognition1
 
-
-### mirror3 exemple
+### mirror1 exemple
 
 #### before
-![vidy](https://cloud.githubusercontent.com/assets/14947215/10262699/68009c18-69d3-11e5-8ae8-351b6cb348ff.jpg)
+![empire](https://cloud.githubusercontent.com/assets/14947215/10262753/c812658a-69d5-11e5-97d9-07d5d1fe4284.jpg)
 
 #### after
 ![vidy_modif](https://cloud.githubusercontent.com/assets/14947215/10262640/680841ea-69d1-11e5-9fb0-076a62517bf6.png)
