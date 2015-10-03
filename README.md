@@ -81,7 +81,7 @@ def modifyImage(img):
 ### mirror4 exemple
 
 #### before
-
+![capture d ecran 2015-04-26 a 04 46 55](https://cloud.githubusercontent.com/assets/14947215/10262692/114a8d20-69d3-11e5-88fd-d18f7468c3e3.png)
 
 #### after
 ![capture d ecran 2015-04-26 a 04 46 55_modif](https://cloud.githubusercontent.com/assets/14947215/10262673/7b70fb2c-69d2-11e5-8aaf-5f63674e3edd.png)
