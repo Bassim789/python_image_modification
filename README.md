@@ -1,11 +1,13 @@
 # python_image_modification
 
-process.py manage image modification
+Run main_process.py in the lib folder and you can apply some tyoe of image modification
 
-Following files apply a specific modification using process.py:
+You can modify type of modification files or create your own in the lib folder, it will be automaticly added to the available type.
 
-* differences_recognition1.py
-* mirror1.py
-* mirror2.py
-* mirror3.py
-* mirror4.py
+Modification type available:
+
+* differences_recognition1
+* mirror1
+* mirror2
+* mirror3
+* mirror4
