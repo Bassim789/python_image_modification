@@ -4,6 +4,7 @@ import os
 import glob
 import sys
 import importlib
+import imp
 
 
 def proccessImageModify(completeFileName, path_image_modif):
@@ -159,7 +160,8 @@ def changeType(userInput, path):
             
             if str(compteur) == typeFromUser or modifTypeClean == typeFromUser:
                 actualModifType = modifTypeClean
-                module = __import__(actualModifType)
+                #module = __import__(actualModifType)
+                module = imp.load_source(actualModifType, path + '/' + modifType)
                 find = True
                 break
             
@@ -180,7 +182,8 @@ def setDefaultModifType(path):
         if modifType[-3:] == '.py' and modifType !=  '__init__.py' and modifType !=  'main_process.py' :
             actualModifType = modifType.rsplit('.', 1)[0]
             moduleName = actualModifType
-            module = __import__(moduleName)
+            #module = __import__(moduleName)
+            module = imp.load_source(moduleName, path + '/' + modifType)
             break
 
 
@@ -193,7 +196,9 @@ def getActualModifType():
 
 # Set path
 path = os.path.dirname(os.path.abspath('__file__'))
-path = path.rsplit('/lib', 1)[0] 
+path = path.rsplit('/lib', 1)[0]
+os.chdir(path + '/lib/')
+print os.path.dirname(os.path.abspath('__file__'))
 path_image_original = path + '/image_original/'
 path_image_modif = path + '/image_modif/'
 
