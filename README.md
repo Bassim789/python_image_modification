@@ -1,8 +1,8 @@
 # python_image_modification
 
-process.py gère l'ensemble du processus de modification d'image ou d'ensemble d'image
+process.py manage image modification
 
-Les scripts suivants utilisent process.py pour appliquer une modification spécifique aux images:
+Following files apply a specific modification using process.py:
 
 * differences_recognition1.py
 * mirror1.py
