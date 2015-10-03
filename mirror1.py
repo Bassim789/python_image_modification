@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
-from __future__ import division
-from PIL import Image
-import os
-import glob
 
-
-
-# IMAGE MODIFICATION FONCTION
-# You can modify this fonction
+global modifName
+modifName = 'mirror1'
 
 def modifyImage(img):
     
@@ -63,107 +57,5 @@ def modifyImage(img):
     return img
 
 
+execfile('process.py')
 
-
-# PROCESSING IMAGE MODIFICATION
-
-def proccessImageModify(completeFileName, path_image_modif):
-
-    # Set filename and get image
-    filename = completeFileName.rsplit('/', 1)[1]
-    img = Image.open(completeFileName)
-
-    # modification
-    img = modifyImage(img)
-
-    # Output image modife
-    newFilename = filename.split('.')[0] + '_modife.png'
-    img.save(path_image_modif + newFilename)
-    return '\n' + newFilename + ' a été créer dans le dossier image_modife'
-
-
-def proccessImageModifyAll(path_image_original, path_image_modif):
-
-    print "\nTraitement du dossier...\n"
-    compteurSucces = 0
-    compteurTotal = 0
-
-    # for each image in forder
-    for filename in GetFileName(path_image_original):
-        if filename != '.DS_Store':
-            compteurTotal += 1
-            try:
-                img = Image.open(path_image_original + filename)
-                
-                # modification
-                img = modifyImage(img)
-
-                # Save
-                newFilename = filename.split('.')[0] + '_modife.png'
-                img.save(path_image_modif + newFilename)
-                compteurSucces += 1
-                print 'Succes pour image: ' + filename
-            except:
-                print 'impossible pour image: ' + filename
-            
-    return '\n' + str(compteurSucces) + ' images sur ' + str(compteurTotal) + ' ont été crées dans le dossier image_modife'
-
-
-    
-
-def showFilename(path_image_original):
-    print "\nVoici les images originales dispo:\n"
-    for filename in GetFileName(path_image_original):
-        if filename != '.DS_Store':
-            print filename
-    print
-
-
-def GetFileName(path_image_original):
-    return os.listdir(path_image_original)
-
-
-
-# PROGRAMME START
-
-# Set path
-path = os.getcwd()
-path_image_original = path + '/image_original/'
-path_image_modif = path + '/image_modife/'
-
-# Check and create folder if necessary
-if not os.path.isdir(path_image_original):
-    os.makedirs(path_image_original)
-if not os.path.isdir(path_image_modif):
-    os.makedirs(path_image_modif)
-
-# Show filenames in folder image_original
-showFilename(path_image_original)   
-
-# process input from user
-imageFile = 'start'
-while imageFile != '' and imageFile != ' ' and imageFile != 'q':
-    print '\nCommande:'
-    print 'v pour voir les images dispo'
-    print 't pour modifier tout le dossier'
-    print 'q pour quitter'
-    imageFile = raw_input("\nQuelle image veux-tu modifier: ")
-    filenames = GetFileName(path_image_original)
-    if imageFile != '' and imageFile != ' ' and imageFile != 'q' and imageFile != 'v' and imageFile != 't':
-        if imageFile in filenames:
-            try:
-                completeFileName = path_image_original + imageFile
-                print proccessImageModify(completeFileName, path_image_modif)
-            except Exception as ex:
-                print "\nErreur: " + str(ex)
-        else:
-            print "\nJe n'ai pas compris quel image tu veux. Recopie exactement le nom dans la liste dispo."
-    elif imageFile == 'v':
-        showFilename(path_image_original)
-    elif imageFile == 't':
-        print proccessImageModifyAll(path_image_original, path_image_modif)
-    else:
-        print 'a+'
-        
-        
-        
