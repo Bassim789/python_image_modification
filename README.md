@@ -21,6 +21,21 @@ Modification type available:
 #### after
 ![vidy_modif](https://cloud.githubusercontent.com/assets/14947215/10262640/680841ea-69d1-11e5-9fb0-076a62517bf6.png)
 
+#### mirror1 code
+
+```python
+
+
+```
+
+### mirror1 exemple
+
+#### before
+![vidy](https://cloud.githubusercontent.com/assets/14947215/10262699/68009c18-69d3-11e5-8ae8-351b6cb348ff.jpg)
+
+#### after
+![vidy_modif](https://cloud.githubusercontent.com/assets/14947215/10262640/680841ea-69d1-11e5-9fb0-076a62517bf6.png)
+
 #### mirror3 code
 
 ```python
