@@ -23,7 +23,7 @@ Modification type available:
 
 #### mirror3 code
 
-'''python
+```python
 # -*- coding: utf-8 -*-
 
 from PIL import Image
@@ -75,6 +75,6 @@ def modifyImage(img):
     # Output
     return newImg
 
-'''
+```
 
 
