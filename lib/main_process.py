@@ -232,7 +232,7 @@ print commande()
 # process input from user
 while userInput != 'q':
     
-    userInput = raw_input("\nWhich image would like to modify (NUM or NAME): ").strip()
+    userInput = raw_input("\nWhich image would you like to modify (NUM or NAME): ").strip()
 
     filenames = getFileName(path_image_original)
     numListe = getNumListe(path_image_original)
