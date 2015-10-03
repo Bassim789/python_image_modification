@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
-from __future__ import division
 from PIL import Image
 import os
 import glob
 import sys
 import importlib
 
-global Image
-global ImageChops
 
 def proccessImageModify(completeFileName, path_image_modif):
 
