@@ -4,8 +4,6 @@ from PIL import Image
 import os
 import glob
 
-
-
 # IMAGE MODIFICATION FONCTION
 # You can modify this fonction
 
@@ -28,7 +26,6 @@ def modifyImage(img):
 
     # create new image double height
     newImg = Image.new('RGB', (x, y * 2))
-    
     
     # image part 1
     box = (0, 0, xMiddle, y)
@@ -54,10 +51,8 @@ def modifyImage(img):
     region = region.transpose(Image.FLIP_TOP_BOTTOM)
     newImg.paste(region, box)
 
-
     # Output
     return newImg
-
 
 
 
