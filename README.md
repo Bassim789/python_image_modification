@@ -1,6 +1,6 @@
 # python_image_modification
 
-Run main_process.py in the lib folder and you can apply some type of modification on your images.
+Run exec.py and you can apply diverse type of modification for your images.
 
 You can modify type of modification files or create your own in the lib folder, it will be automaticly added to the available type.
 
