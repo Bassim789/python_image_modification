@@ -18,12 +18,67 @@ Modification type available:
 ![empire](https://cloud.githubusercontent.com/assets/14947215/10262753/c812658a-69d5-11e5-97d9-07d5d1fe4284.jpg)
 
 #### after
-![vidy_modif](https://cloud.githubusercontent.com/assets/14947215/10262640/680841ea-69d1-11e5-9fb0-076a62517bf6.png)
+![empire_modif_mirror1](https://cloud.githubusercontent.com/assets/14947215/10262781/cab35870-69d6-11e5-9bb8-5e5d6bf1b3e3.png)
 
 #### mirror1 code
 
 ```python
+# -*- coding: utf-8 -*-
 
+from PIL import Image
+
+def modifyImage(img):
+    
+    # get height and width
+    x = img.size[0]
+    y = img.size[1]
+
+    # get middle witdh
+    xMiddle = x/2
+    if x % 2 == 1:
+        xMiddle = (x-1) / 2
+        x = x - 1
+    xMiddle = int(xMiddle)
+
+    # get middle height
+    yMiddle = y/2
+    if y % 2 == 1:
+        yMiddle = (y-1) / 2
+        y = y - 1
+    yMiddle = int(yMiddle)
+
+    # resize with middle dimension
+    imgResized = img.resize((xMiddle, yMiddle), Image.BICUBIC)
+    
+    # image part 1
+    box = (0, 0, xMiddle, yMiddle)
+    region = imgResized
+    region = region.convert('L')
+    img.paste(region, box)
+    
+    # image part 2
+    box = (xMiddle, 0, x, yMiddle)
+    region = imgResized
+    region = region.transpose(Image.FLIP_LEFT_RIGHT)
+    img.paste(region, box)
+
+    # image part 3
+    box = (0, yMiddle, xMiddle, y)
+    region = imgResized
+    region = region.transpose(Image.FLIP_TOP_BOTTOM)
+    img.paste(region, box)
+
+    # image part 4
+    box = (xMiddle, yMiddle, x, y)
+    region = imgResized
+    region = region.convert('1').rotate(180)
+    img.paste(region, box)
+
+    # Crop img for impair size
+    img = img.crop((0, 0, x, y))
+    
+    # Output
+    return img
 
 ```
 
