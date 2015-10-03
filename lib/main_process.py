@@ -198,7 +198,6 @@ def getActualModifType():
 path = os.path.dirname(os.path.abspath('__file__'))
 path = path.rsplit('/lib', 1)[0]
 os.chdir(path + '/lib/')
-print os.path.dirname(os.path.abspath('__file__'))
 path_image_original = path + '/image_original/'
 path_image_modif = path + '/image_modif/'
 
